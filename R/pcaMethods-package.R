@@ -1,5 +1,6 @@
 ##' Simulated data set looking like a helix
 ##' 
+##' 
 ##' A matrix containing 1000 observations (rows) and three variables
 ##' (columns).
 ##' @title A helix structured toy data set
@@ -84,6 +85,9 @@ NULL
 ##' @name pcaMethods
 ##' @aliases pcaMethods
 ##' @docType package
+##' @importFrom Rcpp evalCpp
+##' @import Biobase
+##' @import BiocGenerics
 ##' @title pcaMethods
 ##' @useDynLib pcaMethods
 ##' @author Wolfram Stacklies, Henning Redestig
