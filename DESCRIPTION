@@ -1,7 +1,7 @@
 Package: pcaMethods
 Maintainer: Henning Redestig <henning.red@gmail.com>
 License: GPL (>= 3)
-Title: A collection of PCA methods.
+Title: A collection of PCA methods
 LinkingTo: Rcpp
 LazyLoad: Yes
 Author: Wolfram Stacklies, Henning Redestig, Kevin Wright

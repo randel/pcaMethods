@@ -590,11 +590,9 @@ residuals.pcaRes <- function(object, data=completeObs(object), ...) {
     stop("data missing when calculating residuals")
   data - predict(object, data, ...)$x
 }
-##' @importFrom stats residuals
 ##' @aliases residuals,pcaRes-method
 ##' @name rediduals-methods
 setMethod("residuals", "pcaRes", residuals.pcaRes)
-##' @importFrom stats resid
 ##' @name rediduals-methods
 ##' @aliases resid,pcaRes-method
 setMethod("resid", "pcaRes", residuals.pcaRes)
