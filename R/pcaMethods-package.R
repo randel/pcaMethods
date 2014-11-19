@@ -88,6 +88,7 @@ NULL
 ##' @importFrom Rcpp evalCpp
 ##' @import Biobase
 ##' @import BiocGenerics
+##' @import methods
 ##' @title pcaMethods
 ##' @useDynLib pcaMethods
 ##' @author Wolfram Stacklies, Henning Redestig

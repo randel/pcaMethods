@@ -19,6 +19,8 @@ showPcaRes(x, ...)
 \item{x}{a pcaRes object}
 
 \item{...}{not used}
+
+\item{object}{the object to print information about}
 }
 \value{
 nothing, used for its side effect

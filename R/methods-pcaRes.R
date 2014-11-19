@@ -288,7 +288,7 @@ scores.pcaRes <- function(object, ...) object@scores
 ##' @param ... not used
 ##' @return The scores as a matrix
 ##' @seealso \code{\link{scores.pcaRes}}
-##' @aliases scores,pcaRes-method
+##' @aliases scores scores,pcaRes-method
 ##' @author Henning Redestig
 setMethod("scores", "pcaRes", scores.pcaRes)
 
@@ -314,7 +314,7 @@ setMethod("loadings", "pcaRes", loadings.pcaRes)
 ##' @param ...  not used
 ##' @return The loadings
 ##' @author Henning Redestig
-##' @aliases loadings,ANY-method
+##' @aliases loadings loadings,ANY-method
 setMethod("loadings", "ANY", function(object,...) {
   stats::loadings(object)
 })
@@ -375,8 +375,9 @@ showPcaRes <- function(x, ...) {
 ##' @aliases print,pcaRes-method print,nniRes-method
 ##' @name show-methods
 setMethod("print", "pcaRes", showPcaRes)
-##' @importFrom methods show
+## @importFrom methods show
 ##' @aliases show,pcaRes-method show,nniRes-method
+##' @param object the object to print information about
 ##' @name show-methods
 setMethod("show", "pcaRes", function(object) showPcaRes(object))
 
@@ -432,7 +433,7 @@ biplot.pcaRes <- function(x, choices=1:2, scale=1, pc.biplot=FALSE, ...) {
   invisible()
 }
 ##' @aliases biplot,pcaRes-method
-##' @importFrom stats biplot
+## @importFrom stats biplot
 ##' @name biplot-methods
 setMethod("biplot", "pcaRes", biplot.pcaRes)
 
@@ -444,7 +445,7 @@ setMethod("biplot", "pcaRes", biplot.pcaRes)
 ##' 'observations' or 'complete'.
 ##' @param data the data used to fit the model
 ##' @param pcs the number of PCs to use to calculate R2
-##' @aliases R2VX,pcaRes-method
+##' @aliases R2VX R2VX,pcaRes-method
 ##' @examples
 ##' R2VX(pca(iris))
 ##' @return A vector with R2 values
@@ -561,7 +562,7 @@ predict.pcaRes <- function(object, newdata, pcs=nP(object),
     xhat <- prep(xhat, scl(object), center(object), reverse=TRUE)
   list(scores=tnew, x=xhat)
 }
-##' @importFrom stats predict
+## @importFrom stats predict
 ##' @name predict-methods
 ##' @aliases predict,pcaRes-method
 setMethod("predict", "pcaRes", predict.pcaRes)
@@ -656,7 +657,7 @@ fitted.pcaRes <- function(object, data=NULL, nPcs=nP(object),
     recData <- prep(recData, scl(object), center(object), reverse=TRUE)
   return(recData)
 }
-##' @importFrom stats fitted
+## @importFrom stats fitted
 ##' @name fitted-methods
 ##' @aliases fitted,pcaRes-method
 setMethod("fitted", "pcaRes", fitted.pcaRes)
@@ -689,6 +690,7 @@ setMethod("fitted", "pcaRes", fitted.pcaRes)
 ##' @author Henning Redestig
 plot.pcaRes <- function(x, y=NULL, main=deparse(substitute(object)),
                         col=gray(c(0.9, 0.5)), ...) {
+  y <- NULL
   ## the deparse(subsitute(object)) later fails otherwise
   main <- main
   if(!is.null(cvstat(x))) {

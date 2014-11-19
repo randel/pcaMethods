@@ -47,5 +47,5 @@ setGeneric("scores", function(object, ...) standardGeneric("scores"))
 setGeneric("loadings", function(object, ...) standardGeneric("loadings"))
 ##' @exportMethod R2VX
 setGeneric("R2VX", function(object, ...) standardGeneric("R2VX"))
-##' @exportMethod prep
-setGeneric("prep", function(object, ...) standardGeneric("prep"))
+## @exportMethod prep
+#setGeneric("prep", function(object, ...) standardGeneric("prep"))
