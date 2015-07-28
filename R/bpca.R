@@ -61,7 +61,7 @@
 ##' components used for re-estimation.
 ##' @title Bayesian PCA Missing Value Estimator
 ##' @param Matrix \code{matrix} -- Pre-processed matrix (centered,
-##' scaled) with variables in columns and observations in rows. The
+##' scaled) with variables in rows and observations in columns. The
 ##' data may contain missing values, denoted as \code{NA}.
 ##' @param nPcs \code{numeric} -- Number of components used for
 ##' re-estimation. Choosing few components may decrease the estimation
